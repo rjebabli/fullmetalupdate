@@ -64,7 +64,7 @@ async def main():
     else:
         url_type = 'http://'
 
-    local_domain_name = config.get('server', 'server_host_name')
+    local_domain_name = config.get('ostree', 'ostree.fotahub.com')
 
     HOST = local_domain_name + ":" + config.get('client', 'hawkbit_url_port')
     SSL = config.getboolean('client', 'hawkbit_ssl')
@@ -79,7 +79,7 @@ async def main():
     else:
         url_type = 'http://'
 
-    local_domain_name = config.get('server', 'server_host_name')
+    local_domain_name = config.get('ostree', 'ostree.fotahub.com')
 
     OSTREE_REMOTE_ATTRIBUTES = {'name': config.get('ostree', 'ostree_name_remote'),
             'gpg-verify': strtobool(config.get('ostree', 'ostree_gpg-verify')),
